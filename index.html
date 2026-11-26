@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>납읍리 동네탐험지도</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="assets/napeup/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <h1 id="title">납읍리 동네탐험지도</h1>
+    <div class="top-actions">
+      <button class="pill" data-modal="guide"><img src="assets/icons/binoculars.webp" alt=""><span>탐험가이드</span></button>
+      <button class="pill" data-modal="etiquette"><img src="assets/icons/heart.webp" alt=""><span>탐험에티켓</span></button>
+      <button class="pill round" data-modal="about" aria-label="더보기">⋯</button>
+    </div>
+  </header>
+  <div class="body">
+    <nav class="rail" aria-label="지도 메뉴">
+      <button data-panel="course"><img src="assets/icons/flag.webp" alt="">탐험코스</button>
+      <button data-panel="mine"><img src="assets/icons/pin.webp" alt="">나만의 장소</button>
+      <button data-panel="mycourse"><img src="assets/icons/treasure.webp" alt="">나만의 코스</button>
+      <button data-panel="charm"><img src="assets/icons/charm.webp" alt="">동네의 매력</button>
+      <button data-panel="keep"><img src="assets/icons/heart.webp" alt="">지켜졌으면</button>
+      <button data-panel="story"><img src="assets/icons/camera.webp" alt="">동네이야기</button>
+    </nav>
+    <section class="mapwrap" id="mapwrap">
+      <svg id="map" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="zoom">
+        <button id="zin" aria-label="확대">+</button>
+        <button id="zout" aria-label="축소">−</button>
+        <button id="zfit" aria-label="전체 보기">⟐</button>
+      </div>
+      <div class="pop" id="pop"><button class="x" aria-label="닫기">✕</button><div id="popBody"></div></div>
+      <aside class="panel" id="panel"><button class="x" aria-label="닫기">✕</button><div id="panelBody"></div></aside>
+    </section>
+  </div>
+</div>
+<div class="modal-bg" id="modalBg"><div class="modal"><button class="x" aria-label="닫기">✕</button><div id="modalBody"></div></div></div>
+<script src="assets/napeup/data.js"></script>
+<script src="assets/napeup/app.js"></script>
+</body>
+</html>
